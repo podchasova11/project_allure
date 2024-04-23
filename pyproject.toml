@@ -1,0 +1,30 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "examples.allure-pytest"
+version = "0.0.0"
+description = "Getting started with Allure Pytest!"
+authors = ["Put Your Name Here <put-your-email@here>"]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12"
+]
+
+[tool.poetry.dependencies]
+# Use `poetry add` to add the project's production dependencies.
+# You may also declare them here (make sure to run `poetry lock` after that!):
+python = ">=3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+# Use `poetry add -G dev` to add the project's dev dependencies.
+# You may also declare them here (make sure to run `poetry lock` after that!):
+allure-pytest = "*"
+flake8 = "*"
+flake8-builtins = "*"
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
